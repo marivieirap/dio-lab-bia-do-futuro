@@ -2,10 +2,10 @@
 
 ## Como Avaliar seu Agente
 
-A avaliação pode ser feita de duas formas complementares:
+A avaliação foi realizada de duas formas:
 
-1. **Testes estruturados:** Você define perguntas e respostas esperadas;
-2. **Feedback real:** Pessoas testam o agente e dão notas.
+1. **Testes estruturados:** Foram definidos cenários com perguntas e respostas esperadas;
+2. **Feedback real:** Usuários testaram o agente e avaliaram sua qualidade.
 
 ---
 
@@ -13,59 +13,62 @@ A avaliação pode ser feita de duas formas complementares:
 
 | Métrica | O que avalia | Exemplo de teste |
 |---------|--------------|------------------|
-| **Assertividade** | O agente respondeu o que foi perguntado? | Perguntar o saldo e receber o valor correto |
-| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
-| **Coerência** | A resposta faz sentido para o perfil do cliente? | Sugerir investimento conservador para cliente conservador |
+| **Assertividade** | O agente respondeu corretamente sobre pontos e benefícios? | Perguntar quantos pontos foram acumulados |
+| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto |
+| **Coerência** | A resposta faz sentido com o cartão do cliente? | Benefícios compatíveis com o tipo de cartão |
 
 > [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+> Os testes foram realizados considerando clientes fictícios com dados simulados de cartão, transações e benefícios.
 
 ---
 
 ## Exemplos de Cenários de Teste
 
-Crie testes simples para validar seu agente:
+### Teste 1: Consulta de pontos
+- **Pergunta:** "Quantos pontos eu fiz esse mês?"
+- **Resposta esperada:** Valor baseado nas transações e na regra do cartão
+- **Resultado:** [x] Correto  [ ] Incorreto
 
-### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+---
 
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+### Teste 2: Benefícios do cartão
+- **Pergunta:** "Quais benefícios meu cartão tem?"
+- **Resposta esperada:** Lista de benefícios conforme o cartão do cliente
+- **Resultado:** [x] Correto  [ ] Incorreto
+
+---
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Agente informa que não trata desse assunto
+- **Resultado:** [x] Correto  [ ] Incorreto
+
+---
 
 ### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Pergunta:** "Qual a pontuação do cartão Black?"
+- **Resposta esperada:** Agente informa que não possui essa informação
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ---
 
 ## Resultados
 
-Após os testes, registre suas conclusões:
-
 **O que funcionou bem:**
-- [Liste aqui]
+- O agente respondeu corretamente sobre cálculo de pontos  
+- Manteve o foco apenas em pontuação e benefícios  
+- Evitou responder perguntas fora do escopo  
+- Linguagem clara e acessível para o usuário  
 
 **O que pode melhorar:**
-- [Liste aqui]
+- Tornar os cálculos mais detalhados na resposta  
+- Incluir mais tipos de cartões na base de dados  
+- Melhorar a personalização com mais dados do cliente  
 
 ---
 
 ## Métricas Avançadas (Opcional)
 
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
-
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
-
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
+- Tempo médio de resposta baixo (respostas rápidas)  
+- Baixo risco de alucinação devido ao uso de dados estruturados  
+- Possibilidade futura de monitoramento com ferramentas como LangFuse ou LangWatch  
