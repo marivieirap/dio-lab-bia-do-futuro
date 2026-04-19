@@ -1,0 +1,26 @@
+[
+  {
+    "cartao": "Classic",
+    "beneficios": [
+      "Acúmulo de pontos em compras",
+      "Descontos em parceiros selecionados"
+    ]
+  },
+  {
+    "cartao": "Gold",
+    "beneficios": [
+      "Acúmulo de pontos em todas as compras",
+      "Descontos em parceiros",
+      "Promoções exclusivas"
+    ]
+  },
+  {
+    "cartao": "Platinum",
+    "beneficios": [
+      "Maior acúmulo de pontos",
+      "Acesso a salas VIP",
+      "Conversão de pontos em milhas",
+      "Ofertas exclusivas"
+    ]
+  }
+]
