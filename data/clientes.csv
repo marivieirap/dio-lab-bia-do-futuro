@@ -1,0 +1,4 @@
+id_cliente,nome,tipo_conta,cartao
+1,João Silva,Premium,Gold
+2,Maria Souza,Standard,Platinum
+3,Carlos Lima,Básica,Classic
