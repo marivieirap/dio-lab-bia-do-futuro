@@ -1,0 +1,17 @@
+[
+  {
+    "cartao": "Classic",
+    "pontos_por_real": 0.5,
+    "descricao": "Cartão básico com acúmulo reduzido de pontos"
+  },
+  {
+    "cartao": "Gold",
+    "pontos_por_real": 1,
+    "descricao": "Cartão intermediário com bom acúmulo de pontos"
+  },
+  {
+    "cartao": "Platinum",
+    "pontos_por_real": 1.5,
+    "descricao": "Cartão avançado com maior acúmulo de pontos"
+  }
+]
